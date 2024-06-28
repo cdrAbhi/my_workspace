@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: ./nginx
+    ports:
+      - "80:80"
+
+  backend:
+    build:
+      context: ./backend
+    expose:
+      - "3000"
